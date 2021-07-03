@@ -1,0 +1,16 @@
+<section class="orders">
+
+  <div class="orders-card">
+    <h1>اسم: {{order.name}}</h1>
+    <p>شماره تماس : {{order.phoneNumber}}</p>
+    <p>سفارش شده در تاریخ: {{order.createdAt}}</p>
+    <p>آدرس :{{order.address}}</p>
+    <p>مدل محصول :{{order.product.modelName}}</p>
+    <p>قیمت محصول :{{commaSeparate order.product.price "تومان"}} تومان</p>
+    {{#if order.processed}}{{else}}
+      <a href="/order/process/{{order._id}}" class="btn btn-primary">پردازش
+        سفارش</a>
+    {{/if}}
+  </div>
+
+</section>

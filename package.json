@@ -1,0 +1,29 @@
+{
+  "name": "behrun",
+  "version": "1.0.0",
+  "description": "ecommerce for solar solar water heaters",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "author": "mohammad ghahri",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-handlebars": "^5.3.2",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.3.0",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "mongoose": "^5.12.10",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "xss-clean": "^0.1.1"
+  }
+}

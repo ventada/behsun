@@ -1,0 +1,108 @@
+<section class="welcome">
+  <div class="container rtl">
+    <div class="site-heading">
+      <div>
+        <h1>شرکت بهسان</h1>
+        <p>تولید کننده انواع آبگرمکن های خورشیدی</p>
+        <p>
+          آویسا از مشاوره فروش، خرید محصول، نصب و پشتیبانی و خدمات پس از فروش
+          شما را همراهی می کند.
+        </p>
+        <a href="/products/all" class="btn btn-primary">مشاهده محصولات</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="divider"></div>
+  <div class="row col-3">
+    <div class="icon-card">
+      <i class="far fa-handshake-alt"></i>
+      <h1>هرکسی میتواند قدری سبز زندگی کند</h1>
+    </div>
+    <div class="icon-card">
+      <i class="fal fa-solar-panel"></i>
+      <h1>آبگرمکن خورشیدی بهسان با افتخار ساخت ایران با بهترین کیفیت</h1>
+    </div>
+    <div class="icon-card">
+      <i class="fal fa-hand-holding-magic"></i>
+      <h1>هرکسی میتواند قدری سبز زندگی کند</h1>
+    </div>
+  </div>
+</section>
+
+<section class="best-product">
+  <div class="divider"></div>
+  <div class="container">
+    <h1 class="white">محصولات برتر</h1>
+    <div class="row col-2">
+      <!-- first card -->
+      {{#each solars}}
+
+        <div class="card">
+          <div class="card-image">
+            <img src="/uploads/{{getImage images 0}}" alt="" />
+            <div class="info">
+              <h1>مشخصات</h1>
+              <div class="info-detail">
+                <p>حجم مخزن : {{tankVolume}}</p>
+                <p>وکیوم : {{vacum}}</p>
+                <p>مخزن داخلی : {{internalTank}}</p>
+                <p>مخزن خارجی : {{externalTank}}</p>
+                <p>لایه عایق کننده : {{insulationLayer}}</p>
+                <a class="btn btn-primary" href="/products/single/{{_id}}">مشاهده بیشتر</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h1><a href="/products/single/{{_id}}">آبگرمکن مدل {{modelName}}</a></h1>
+            <p>
+              {{texttruncate desc 150}}
+            </p>
+            <div class="card-btn">
+              <a
+                href="/order/{{_id}}"
+                class="btn btn-secondary hover-darken"
+              >همین حالا سفارش بدهید</a>
+              <i class="fas fa-shopping-cart"></i>
+              {{{adminFeature ../user _id}}}
+            </div>
+          </div>
+        </div>
+      {{/each}}
+      <!-- end of first card -->
+    </div>
+
+    <div class="center pt-25">
+      <a href="/products/all" class="btn btn-gradiant">مشاهده ی همه محصولات</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-us" id="contactus">
+  <div class="divider"></div>
+  <div class="container center rtl">
+    <form action="/message/add" method="POST">
+      <h1 class="gradiant-bg">
+        اگر سوالی در مورد محصولات ما دارین ، با ما تماس بگیرین
+      </h1>
+      <h4 class="gradiant-bg">
+       و یا از راه های ارتباطی پایین صفحه استفاده کنید
+      </h4>
+      <p class="border-bottom mb-25">درخواست مشاوره از کارشناسان بهسان</p>
+      <div class="form-control">
+        <input name="name" type="text" placeholder="نام و نام خانوادگی" />
+      </div>
+      <div class="form-control">
+        <input name="phone" type="text" placeholder="شماره تماس" />
+      </div>
+      <div class="form-control">
+        <textarea name="text" cols="30" rows="10" placeholder="پیام شما"></textarea>
+      </div>
+      <div class="center pt-25">
+        <button type="submit" class="btn btn-gradiant s hover">ارسال پیام</button>
+      </div>
+    </form>
+  </div>
+</section>

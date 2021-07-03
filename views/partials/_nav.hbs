@@ -1,0 +1,21 @@
+<nav>
+  <div class="container">
+    <div class="logo">
+      <h1>behsun</h1>
+      {{#if user}}
+        <a href="/auth/logout"><i class="fal fa-sign-out-alt"></i> خروج</a>
+      {{else}}
+        <a href="/login"><i class="fal fa-sign-in-alt"></i> ورود | ثبت نام</a>
+      {{/if}}
+    </div>
+    <label for="check"><i class="fad fa-ellipsis-h"></i></label>
+    <input type="checkbox" name="" id="check" hidden />
+    <ul>
+      <li><a href="/"> صفحه اصلی </a></li>
+      <li><a href="/products/all"> محصولات </a></li>
+      {{{adminAddLink user}}}
+      <li><a href="/#contactus"> تماس با ما </a></li>
+
+    </ul>
+  </div>
+</nav>

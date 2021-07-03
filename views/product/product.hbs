@@ -1,0 +1,61 @@
+<section class="product center">
+  <div class="product-card">
+    <div class="images">
+      <div class="">
+        <img
+          src="/uploads/{{getImage solar.images 0}}"
+          class="main-img"
+          alt=""
+        />
+      </div>
+      <div class="sub-img">
+        <img src="/uploads/{{getImage solar.images 1}}" alt="" />
+        <img src="/uploads/{{getImage solar.images 2}}" alt="" />
+        <img src="/uploads/{{getImage solar.images 3}}" alt="" />
+      </div>
+    </div>
+    <div class="content">
+      <h1 class="gradiant-bg">آبگرمکن مدل {{solar.modelName}}</h1>
+      <p class="border-bottom">موجودی در انبار : {{solar.inventory}}</p>
+      <p class="price"> {{commaSeparate solar.price "تومان"}} تومان</p>
+      <div class="page-btn">
+        <input type="radio" checked name="radio" id="desc" />
+        <label for="desc"><i class="far fa-comment-alt-medical"></i>
+          توضیحات
+        </label>
+        <input type="radio" name="radio" id="specs" />
+        <label for="specs"><i class="fas fa-info-circle"></i>پارامترها </label>
+        <input type="radio" name="radio" id="detail" />
+        <label for="detail"> <i class="far fa-tags"></i>مشخصات فنی</label>
+      </div>
+      <div class="desc">
+        {{solar.desc}}
+      </div>
+      <div class="specs">
+        <div class="specs-detail">
+          <p>حجم مخزن : {{solar.tankVolume}}</p>
+          <p>وکیوم : {{solar.vacum}}</p>
+          <p>فضای مورد نیاز : {{solar.requiredSpace}}</p>
+
+          <p>لایه عایق کننده : {{solar.insulationLayer}}</p>
+        </div>
+      </div>
+      <div class="detail" style="display: none;">
+        <div class="specs-detail">
+          <p> وکیوم تیوب : {{solar.vacumTube}}</p>
+          <p>هیت پایپ : {{solar.heatPipe}}</p>
+          <p>مخزن داخلی : {{solar.internalTank}}</p>
+          <p>مخزن خارجی : {{solar.externalTank}}</p>
+          <p>لایه عایق کننده : {{solar.insulationLayer}}</p>
+        </div>
+      </div>
+
+      <div class="card-btn">
+        <a href="#" class="btn btn-secondary hover-darken">سفارش</a>
+        <i class="fas fa-shopping-cart"></i>
+        {{{adminFeature user solar._id}}}
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/js/productPage.js"></script>

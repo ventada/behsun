@@ -1,0 +1,23 @@
+<section class="order">
+  <form class="order-card" action="/order/{{solar._id}}" method="POST">
+    <img src="/uploads/{{getImage solar.images 0}}" alt="" />
+    <h1>مدل محصول : {{solar.modelName}}</h1>
+    <p>قیمت محصول : {{commaSeparate solar.price "تومان"}} تومان</p>
+
+    <div class="form-control">
+      <input name="name" type="text" placeholder="نام و نام خانوادگی" />
+    </div>
+    <div class="form-control">
+      <input name="phoneNumber" type="text" placeholder="شماره تماس" />
+    </div>
+    <div class="form-control">
+      <textarea name="address" placeholder="آدرس"></textarea>
+    </div>
+    <p class="law">
+      بعد از ثبت اطلاعات حداکثر بعد از یک روز کاری برای تکمیل مراحل سفارش با شما
+      تماس خواهیم گرفت. لطفا از صحت اطلاعات وارد شده اطمینان حاصل فرمایید
+    </p>
+
+    <button class="btn btn-gradiant">ثبت سفارش</button>
+  </form>
+</section>

@@ -1,0 +1,14 @@
+<section class="orders">
+  {{{Link}}}
+  {{#each orders}}
+
+    <div class="orders-card">
+      <h1>اسم: {{name}}</h1>
+      <p>شماره تماس : {{phoneNumber}}</p>
+      <p>آدرس :{{address}}</p>
+      <p>مدل محصول :{{product.modelName}}</p>
+      <a href="/order/single/{{_id}}" class="btn btn-secondary">بیشتر</a>
+    </div>
+  {{/each}}
+
+</section>

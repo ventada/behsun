@@ -1,0 +1,14 @@
+<section class="orders">
+  {{{Link}}}
+  {{#each messages}}
+
+    <div class="orders-card">
+      <h1>اسم: {{name}}</h1>
+      <p>شماره تماس : {{phoneNumber}}</p>
+      <p>تاریخ : {{createdAt}}</p>
+      <p>{{text}}</p>
+      {{!-- <a href="/message/single/{{_id}}" class="btn btn-secondary">بیشتر</a> --}}
+    </div>
+  {{/each}}
+
+</section>
